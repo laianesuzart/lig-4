@@ -1,0 +1,65 @@
+@font-face {
+  font-family: "Naruto";
+  src: url(../fonts/ninja_naruto/njnaruto.ttf);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --color-playerOne: #F05321;
+  --color-playerTwo: #f072ac;
+  --color-text: #aa130f;
+  --background-gameTable: rgba(0, 0, 0, 0.267);
+}
+
+/* body */
+body {
+  font-family: "Naruto",sans-serif;
+}
+
+/* header */
+header {
+
+}
+
+header h1 {
+  
+}
+
+/* main */
+main {
+  display: flex;
+}
+
+div#gameTable {
+  display: flex;
+}
+
+div.col {
+  display: flex;
+  flex-direction: column-reverse;
+}
+
+div.row {
+  width: 30px;
+  height: 30px;
+  border: 1px solid black;
+}
+
+/* footer */
+footer {
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+}
+
+@media screen and (min-width: 768px) {
+  div.row {
+    width: 50px;
+    height: 50px;
+  }
+}
