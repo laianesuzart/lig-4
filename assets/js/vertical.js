@@ -10,7 +10,8 @@ document.addEventListener("click", () => {
                         }
                     } 
                 }
-            } 
+            }
+
             if (gamePlay[i][j] === 2) {
                 if (gamePlay[i-1][j] === 2) {
                     if (gamePlay[i-2][j] === 2) {
@@ -24,16 +25,3 @@ document.addEventListener("click", () => {
         }
     }
 })
-
-
-
-
-/*
-let gamePlay = [
-    [1,2,0,0,0,0,0],
-    [1,2,0,0,0,0,0],
-    [1,2,0,0,0,0,0],
-    [1,2,0,0,0,0,0],
-    [1,2,0,0,0,0,0],
-    [1,2,0,0,0,0,0]
-]*/
