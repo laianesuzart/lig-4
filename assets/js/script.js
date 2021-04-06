@@ -35,13 +35,14 @@ const insertBall = e => {
 
     if(isColNotFull(col)) {
         const ball = makeBall();
-
+        playSound(dropSounds[currentPlayer]);
+        
         colChildArray.forEach((cell,index)=>{
             if (cell.childElementCount === 0) {
                 cell.appendChild(ball);
                 rowPosition = index;
             }
-        })
+        });
 
         if(currentPlayer === "player1"){
             gamePlay[rowPosition][colPosition-1] = 1;
