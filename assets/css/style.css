@@ -41,13 +41,19 @@ div#gameTable {
 
 div.col {
   display: flex;
-  flex-direction: column-reverse;
+  flex-direction: column;
 }
 
 div.row {
   width: 30px;
   height: 30px;
   border: 1px solid black;
+}
+
+.ball {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
 }
 
 /* footer */
