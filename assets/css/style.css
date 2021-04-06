@@ -56,6 +56,18 @@ div.row {
   border-radius: 50%;
 }
 
+.player1 {
+  background-color: var(--color-playerOne);
+}
+
+.player2 {
+  background-color: var(--color-playerTwo);
+}
+
+.hidden {
+  display: none;
+}
+
 /* footer */
 footer {
   position: absolute;
