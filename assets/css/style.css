@@ -86,14 +86,17 @@ div.row {
   width: 30px;
   height: 30px;
   border-radius: 50%;
+  background-size: contain;
 }
 
 .player1 {
   background-color: var(--color-playerOne);
+  background-image: url(../img/shuriken.png);
 }
 
 .player2 {
   background-color: var(--color-playerTwo);
+  background-image: url(../img/kunai.png);
 }
 
 .hidden {
