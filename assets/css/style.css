@@ -30,6 +30,9 @@ div.container {
   background-repeat: no-repeat;
   background-position: center bottom;
   height: 100vh;
+  max-width: 2400px;
+  margin: 0 auto;
+  position: relative;
 }
 
 /* header */
@@ -113,9 +116,6 @@ footer {
 }
 
 @media screen and (min-width: 768px) {
-  body {
-    background-color: #000;
-  }
   div.container {
     background-image: url(../img/desktop.jpg);
   }
@@ -134,9 +134,6 @@ footer {
   }
 
   footer {
-    color: #000;
-    text-shadow: none;
-    -webkit-text-stroke: 0.5px var(--color-text);
     font-size: 1rem;
   }
 }
