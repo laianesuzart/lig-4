@@ -25,5 +25,3 @@ const winHorizontal = (gamePlay,rowPosition)=>{
 //         winHorizontal(gamePlay, rowPosition);
 //     });
 // });
-
-
