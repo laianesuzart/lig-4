@@ -24,6 +24,8 @@ body {
 }
 
 div.container {
+  display: grid;
+  place-items: center;
   padding: 20px 0;
   background-image: url(../img/mobile.jpg);
   background-size: cover;
@@ -61,10 +63,9 @@ header h2 {
 /* main */
 main {
   display: flex;
-  padding-bottom: 40px;
+  padding: 0 20px 40px;
   background-color: var(--background-gameTable);
   max-width: 600px;
-  margin: 0 auto;
 }
 
 div#gameTable {
@@ -95,11 +96,13 @@ div.row {
 .player1 {
   background-color: var(--color-playerOne);
   background-image: url(../img/shuriken.png);
+  animation: shuriken 1s;
 }
 
 .player2 {
   background-color: var(--color-playerTwo);
   background-image: url(../img/kunai.png);
+  animation: kunai 1s;
 }
 
 .hidden {
@@ -113,6 +116,24 @@ footer {
   position: absolute;
   bottom: 0;
   left: 10px;
+}
+
+@keyframes shuriken {
+  from {
+    transform: rotate(0);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes kunai {
+  from {
+    transform: rotate(0);
+  }
+  to {
+    transform: rotate(-45deg);
+  }
 }
 
 @media screen and (min-width: 768px) {
