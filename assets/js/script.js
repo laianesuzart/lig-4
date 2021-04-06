@@ -1,5 +1,14 @@
 let currentPlayer = 'player1';
 
+let gamePlay = [
+    [0,0,0,0,0,0,0],
+    [0,0,0,0,0,0,0],
+    [0,0,0,0,0,0,0],
+    [0,0,0,0,0,0,0],
+    [0,0,0,0,0,0,0],
+    [0,0,0,0,0,0,0]
+]
+
 const changePlayer = () => {
     if (currentPlayer === 'player1') {
         currentPlayer = 'player2';
@@ -8,12 +17,7 @@ const changePlayer = () => {
     }
 }
 
-const isColNotFull = node => {
-    if (node.firstElementChild.childElementCount === 0) {
-        return true;
-    }
-    return false;
-}
+const isColNotFull = node => node.firstElementChild.childElementCount === 0;
 
 const makeBall = () => {
     const ball = document.createElement('div');
@@ -23,15 +27,26 @@ const makeBall = () => {
 
 const insertBall = e => {
     let col = e.currentTarget;
+    let colPosition = col.dataset.column;
+    let colChildArray = Array.from(col.children)
 
+    let rowPosition = 0;
     if(isColNotFull(col)) {
         const ball = makeBall();
-        for (let i = 0; i < col.children.length; i++) {
-            let cell = col.children[i];
-            if(cell.childElementCount === 0) {
+
+        colChildArray.forEach((cell,index)=>{
+            if (cell.childElementCount === 0) {
                 cell.appendChild(ball);
+                rowPosition = index;
             }
+        })
+
+        if(currentPlayer === "player1"){
+            gamePlay[rowPosition][colPosition-1] = 1;
+        }else if(currentPlayer === "player2"){
+            gamePlay[rowPosition][colPosition-1] = 2;
         }
+
         changePlayer();
     }
 }
