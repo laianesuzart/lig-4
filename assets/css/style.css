@@ -14,29 +14,63 @@
   --color-playerTwo: #f072ac;
   --color-text: #aa130f;
   --background-gameTable: rgba(0, 0, 0, 0.267);
+  --bg-color: #024da1;
 }
 
 /* body */
 body {
   font-family: "Naruto",sans-serif;
+  background-color: var(--bg-color);
+}
+
+div.container {
+  display: grid;
+  place-items: center;
+  padding: 20px 0;
+  background-image: url(../img/mobile.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center bottom;
+  height: 100vh;
+  max-width: 2400px;
+  margin: 0 auto;
+  position: relative;
 }
 
 /* header */
 header {
+  margin-bottom: 40px;
+}
 
+header h1, header h2 {
+  text-align: center;
+  font-weight: normal;
+  letter-spacing: 2px;
+  line-height: 1.5;
 }
 
 header h1 {
-  
+  font-size: 1.5rem;
+  text-shadow: 2px 2px var(--color-text);
+}
+
+header h2 {
+  font-size: 1rem;
+  color: var(--color-text);
+  text-shadow: 1px 1px #000;
 }
 
 /* main */
 main {
   display: flex;
+  padding: 0 20px 40px;
+  background-color: var(--background-gameTable);
+  max-width: 600px;
 }
 
 div#gameTable {
   display: flex;
+  margin: 40px auto 0;
 }
 
 div.col {
@@ -47,21 +81,28 @@ div.col {
 div.row {
   width: 30px;
   height: 30px;
-  border: 1px solid black;
+  border-radius: 50%;
+  background-color: #024ca1b9;
+  margin: 0 4px 4px 0;
 }
 
 .ball {
   width: 30px;
   height: 30px;
   border-radius: 50%;
+  background-size: contain;
 }
 
 .player1 {
   background-color: var(--color-playerOne);
+  background-image: url(../img/shuriken.png);
+  animation: shuriken 1s;
 }
 
 .player2 {
   background-color: var(--color-playerTwo);
+  background-image: url(../img/kunai.png);
+  animation: kunai 1s;
 }
 
 .hidden {
@@ -70,14 +111,50 @@ div.row {
 
 /* footer */
 footer {
+  font-size: 0.8rem;
+  text-shadow: 1px 1px var(--color-text);
   position: absolute;
-  bottom: 10px;
+  bottom: 0;
   left: 10px;
 }
 
+@keyframes shuriken {
+  from {
+    transform: rotate(0);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes kunai {
+  from {
+    transform: rotate(0);
+  }
+  to {
+    transform: rotate(-45deg);
+  }
+}
+
 @media screen and (min-width: 768px) {
+  div.container {
+    background-image: url(../img/desktop.jpg);
+  }
+
+  header h1 {
+    font-size: 2rem;
+  }
+
+  header h2 {
+    font-size: 1.5rem;
+  }
+
   div.row, .ball {
     width: 50px;
     height: 50px;
+  }
+
+  footer {
+    font-size: 1rem;
   }
 }
