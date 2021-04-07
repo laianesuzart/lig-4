@@ -39,14 +39,16 @@
 
 const diagonalDownRightCondition = (gamePlay,edgeX,edgeY,indexRow,cell,indexCol)=>{
     if (cell !== 0) {
-        if (indexRow < edgeY && indexCol < edgeX) { //3 e 4
-            if (
-                cell === gamePlay[indexRow + 1][indexCol + 1]
-                &&
-                cell === gamePlay[indexRow + 2][indexCol + 2]
-                &&
-                cell === gamePlay[indexRow + 3][indexCol + 3]
-            ) {
+        if (indexRow < edgeY && indexCol < edgeX) {
+            let countWinDiagonalDownRight = 0;
+
+            for (let i=1;i<=3;i++){
+                if (cell === gamePlay[indexRow + i][indexCol + i]){
+                    countWinDiagonalDownRight++;
+                }
+            }
+
+            if (countWinDiagonalDownRight===3) {
                 endGamePopUp(cell);
             }
         }
@@ -55,14 +57,16 @@ const diagonalDownRightCondition = (gamePlay,edgeX,edgeY,indexRow,cell,indexCol)
 
 const diagonalDownLeftCondition = (gamePlay,edgeX,edgeY,indexRow,cell,indexCol)=>{
     if (cell !== 0) {
-        if (indexRow >= edgeY && indexRow < gamePlay.length && indexCol < edgeX) { //>3 <6 <4
-            if (
-                cell === gamePlay[indexRow - 1][indexCol + 1]
-                &&
-                cell === gamePlay[indexRow - 2][indexCol + 2]
-                &&
-                cell === gamePlay[indexRow - 3][indexCol + 3]
-            ) {
+        if (indexRow >= edgeY && indexRow < gamePlay.length && indexCol < edgeX) {
+            let countDiagonalDownLeft = 0;
+
+            for(let i=1;i<=3;i++){
+                if (cell === gamePlay[indexRow - i][indexCol + i]){
+                    countDiagonalDownLeft++;
+                }
+            }
+
+            if (countDiagonalDownLeft===3) {
                 endGamePopUp(cell);
             }
         }

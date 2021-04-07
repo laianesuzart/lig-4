@@ -67,7 +67,7 @@ startBtn.addEventListener('click', () => {
     mainPanel.classList.add('vanish');
     setTimeout(() => {
         mainPanel.classList.add('hidden');
-    }, 2000);
+    }, 500);
     setTimer(15);
 });
 

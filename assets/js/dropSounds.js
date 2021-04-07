@@ -1,6 +1,9 @@
+const shurikenSound = document.getElementById('shurikenSound');
+const kunaiSound = document.getElementById('kunaiSound');
+
 const dropSounds = {
-    player1: new Audio('../assets/audio/shuriken.mp3'),
-    player2: new Audio('../assets/audio/kunai.mp3')
+    player1: shurikenSound,
+    player2: kunaiSound
 }
 
 for (let audio in dropSounds) {

@@ -1,13 +1,15 @@
-
 const reset =()=>{
     let popUp = document.getElementById("endGamePopUp");
     popUp.classList.add("hidden");
-    let columns = document.querySelectorAll(".col");
+
     columns.forEach(col=>{
         let colChildArray = Array.from(col.children)
         colChildArray.forEach(row => row.innerHTML ="")
     })
-    count = 0
+
+    playCount = 0
+
+    currentPlayer = 'player1';
 
     gamePlay = [
         [0,0,0,0,0,0,0],
@@ -21,7 +23,7 @@ const reset =()=>{
 
 const buttonReset = document.getElementById("reset")
 buttonReset.addEventListener("click",reset)
-
+buttonReset.addEventListener('mouseenter', playBip);
 
 // let col = e.currentTarget;
 // let colChildArray = Array.from(col.children)

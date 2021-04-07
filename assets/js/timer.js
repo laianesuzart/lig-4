@@ -7,7 +7,7 @@ const setTimer = (counter) => {
         setTimer(counter);
     }, 1000)
     if (counter === 0) {
-        changePlayer();
+        currentPlayer = changePlayer(currentPlayer);
         clearTimeout(timeID);
         counter = 15;
         setTimer(counter)

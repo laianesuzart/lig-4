@@ -19,6 +19,12 @@
 }
 
 /* body */
+
+body::after {
+  position:absolute; width:0; height:0; overflow:hidden; z-index:-1;
+  content:url(../img/menu.png) url(../img/menu-pc.webp);
+}
+
 body {
   font-family: "Naruto",sans-serif;
   background-color: var(--bg-color);
@@ -206,7 +212,6 @@ div.turnIcon {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-image: url(../img/arrow.png);
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
@@ -219,15 +224,15 @@ span#timer {
 }
 
 .turnRight {
-  animation: turnRight 500ms;
+  background-image: url(../img/arrowRight.png);
 }
 
 .turnLeft {
-  animation: turnLeft 500ms;
+  background-image: url(../img/arrowLeft.png);
 }
 
 .vanish {
-  animation: vanish 2s;
+  animation: vanish 500ms;
 }
 
 /* game and popUp  */
@@ -294,6 +299,16 @@ div.player2 {
   background-color: var(--color-playerTwo);
   background-image: url(../img/kunai.png);
   animation: kunai 1s;
+}
+
+div.staticPlayer1 {
+  background-color: var(--color-playerOne);
+  background-image: url(../img/shuriken.png);
+}
+
+div.staticPlayer2 {
+  background-color: var(--color-playerTwo);
+  background-image: url(../img/kunai.png);
 }
 
 div.hidden {

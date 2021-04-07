@@ -20,13 +20,14 @@
 const horizontalCondition = (gamePlay,edgeX,indexRow,cell,indexCol)=>{
     if(cell !== 0) {
         if (indexCol < edgeX) {
-            if (
-                (cell === gamePlay[indexRow][indexCol + 1])
-                &&
-                (cell === gamePlay[indexRow][indexCol + 2])
-                &&
-                (cell === gamePlay[indexRow][indexCol + 3])
-            ) {
+            let countWinHorizontal = 0;
+            for(let i=1;i<=3;i++){
+                if (cell === gamePlay[indexRow][indexCol + i]){
+                    countWinHorizontal++;
+                }
+            }
+
+            if (countWinHorizontal===3) {
                 endGamePopUp(cell);
             }
         }
