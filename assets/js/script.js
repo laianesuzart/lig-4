@@ -25,10 +25,12 @@ const makeBall = () => {
     return ball;
 }
 
-let rowPosition = 0;
-let colPosition = 0;
+// let rowPosition = 0;
+// let colPosition = 0;
 
 const insertBall = e => {
+    let rowPosition = 0;
+    let colPosition = 0;
     let col = e.currentTarget;
     colPosition = col.dataset.column;
     let colChildArray = Array.from(col.children)
@@ -50,7 +52,7 @@ const insertBall = e => {
             gamePlay[rowPosition][colPosition-1] = 2;
         }
 
-        winHorizontal(gamePlay,rowPosition);
+        gameConditions(gamePlay);
         changePlayer();
     }
 }

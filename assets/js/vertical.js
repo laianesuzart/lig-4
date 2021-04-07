@@ -1,27 +1,47 @@
-document.addEventListener("click", () => {
-    for (let i = 5; i > 0; i--) {
-        for (let j = 0; j < gamePlay[i].length; j++) {
-            if (gamePlay[i][j] === 1) {
-                if (gamePlay[i-1][j] === 1) {
-                    if (gamePlay[i-2][j] === 1) {
-                        if (gamePlay[i-3][j] === 1) {
-                            let victory = "player1"
-                            return console.log(victory)
-                        }
-                    } 
-                }
-            }
+// const winVertical = gamePlay => {
+//   const edgeY = gamePlay.length - 3;
+//
+//   for(let y = 0; y < edgeY; y++){
+//
+//     for(let x = 0; x < gamePlay[0].length; x++) {
+//       letter = gamePlay[y][x];
+//       if(letter !== 0) {
+//         if(
+//           letter === gamePlay[y+1][x]
+//           &&
+//           letter === gamePlay[y+2][x]
+//           &&
+//           letter === gamePlay[y+3][x]
+//           ) {
+//           console.log(`${letter} won`);
+//         }
+//       }
+//     }
+//   }
+// };
 
-            if (gamePlay[i][j] === 2) {
-                if (gamePlay[i-1][j] === 2) {
-                    if (gamePlay[i-2][j] === 2) {
-                        if (gamePlay[i-3][j] === 2) {
-                            let victory = "player2"
-                             return console.log(victory)
-                        }
-                    }   
-                }
-            }      
+const verticalCondition = (gamePlay,edgeY,indexRow,cell,indexCol)=>{
+    if (cell!==0) {
+        if (indexRow < edgeY) {
+            if (
+                cell === gamePlay[indexRow + 1][indexCol]
+                &&
+                cell === gamePlay[indexRow + 2][indexCol]
+                &&
+                cell === gamePlay[indexRow + 3][indexCol]
+            ) {
+                console.log(`Player${cell} won Vertical`);
+            }
         }
     }
-})
+}
+
+// const winVertical = gamePlay=>{
+//     let edgeY = gamePlay.length - 3;
+//
+//     gamePlay.forEach((row,indexRow)=>{
+//         row.forEach((cell,indexCol)=>{
+//             verticalCondition(gamePlay,edgeY,indexRow,cell,indexCol)
+//         })
+//     })
+// }
