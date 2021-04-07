@@ -106,6 +106,7 @@ const updateGamePlay =(gamePlay,currentPlayer,rowPosition,colPosition)=>{
     return gamePlay;
 }
 
+
 const changePlayer = (currentPlayer) => {
     if (currentPlayer === 'player1') {
         currentPlayer = 'player2';
@@ -125,8 +126,9 @@ const mainGame =(e)=>{
     gameConditions(gamePlay);
 
     playCount = gameDraw(playCount);
-
     currentPlayer = changePlayer(currentPlayer);
+    clearTimeout(timeID);
+    setTimer(15);
 }
 
 const columns = document.querySelectorAll(".col");
