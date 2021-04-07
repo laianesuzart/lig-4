@@ -6,6 +6,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Lig-4</title>
   <link rel="shortcut icon" href="./assets/img/favicon.ico" type="image/x-icon">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=New+Tegomin&display=swap" rel="stylesheet">
   <script src="https://kit.fontawesome.com/95d5bb57b5.js" crossorigin="anonymous"></script>
   <link rel="stylesheet" href="./assets/css/style.css">
 </head>
@@ -17,12 +19,15 @@
     </header>
 
     <div class="mainContainer">
+      <audio src="./assets/audio/bgm.mp3" id="bgm" loop preload="auto"></audio>
+      <audio src="./assets/audio/hoverBtn.mp3" id="hoverBip" preload="auto"></audio>
+    
       <aside>
         <img class="hokage" src="./assets/img/happyHoward.png" alt="Happy Hokage">
         <nav>
           <ul class="menu">
             <li><button id="rulesBtn">Regras</button></li>
-            <li><button id="audioBtn">Volume: <i class="fas fa-volume-off"></i></button></li>
+            <li><button id="audioBtn">Volume: <i id="volIcon" class="fas fa-volume-off"></i></button></li>
             <li><button id="historyBtn">Sobre a vila</button></li>
           </ul>
         </nav>
@@ -90,7 +95,10 @@
       </main>
     </div>
 
-    <div id="popUp" class="hidden"></div>
+    <div id="popUp" class="popUp hidden">
+      <p id="text"></p>
+      <button id="exitBtn">OK</button>
+    </div>
 
     <footer>
       <p>Renegados de Howard Village</p>
@@ -102,6 +110,7 @@
   <script src="./assets/js/horizontal.js"></script>
   <!-- <script src="./assets/js/playerName.js"></script> -->
   <!-- <script src="./assets/js/currentPlayer.js"></script> -->
-
+  <script src="./assets/js/menu.js"></script>
+  <script src="./assets/js/dropSounds.js"></script>
 </body>
 </html>

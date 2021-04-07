@@ -25,7 +25,7 @@ body {
 }
 
 div.container {
-  padding: 20px 0;
+  overflow: hidden;
   background-image: url(../img/mobile.jpg);
   background-size: cover;
   background-repeat: no-repeat;
@@ -74,7 +74,7 @@ aside {
   line-height: 1.4;
 }
 
-ul.menu button {
+button {
   background-color: transparent;
   border: none;
   outline: none;
@@ -128,26 +128,44 @@ div.row {
   margin: 0 4px 4px 0;
 }
 
-.ball {
+/* game and popUp  */
+div.popUp {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-family: 'New Tegomin', serif;
+  overflow: scroll;
+  max-height: 40%;
+  background-image: url(../img/menu.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  padding: 20px;
+}
+
+div.ball {
   width: 30px;
   height: 30px;
   border-radius: 50%;
   background-size: contain;
 }
 
-.player1 {
+div.player1 {
   background-color: var(--color-playerOne);
   background-image: url(../img/shuriken.png);
   animation: shuriken 1s;
 }
 
-.player2 {
+div.player2 {
   background-color: var(--color-playerTwo);
   background-image: url(../img/kunai.png);
   animation: kunai 1s;
 }
 
-.hidden {
+div.hidden {
   display: none;
 }
 
@@ -195,7 +213,7 @@ footer {
     width: 120px;
   }
 
-  ul.menu button {
+  button {
     font-size: 1rem;
   }
 
@@ -203,9 +221,17 @@ footer {
     font-size: 1.2rem;
   }
 
-  div.row, .ball {
+  div.row, div.ball {
     width: 50px;
     height: 50px;
+  }
+
+  div.popUp {
+    overflow: hidden;
+    background-image: url(../img/menu-pc.webp);
+    padding: 20px 40px;
+    max-height: 30%;
+    width: 700px;
   }
 
   footer {
