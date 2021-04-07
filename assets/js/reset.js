@@ -21,7 +21,7 @@ const reset =()=>{
 
 const buttonReset = document.getElementById("reset")
 buttonReset.addEventListener("click",reset)
-
+buttonReset.addEventListener('mouseenter', playBip);
 
 // let col = e.currentTarget;
 // let colChildArray = Array.from(col.children)

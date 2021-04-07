@@ -227,7 +227,7 @@ span#timer {
 }
 
 .vanish {
-  animation: vanish 2s;
+  animation: vanish 500ms;
 }
 
 /* game and popUp  */
@@ -294,6 +294,16 @@ div.player2 {
   background-color: var(--color-playerTwo);
   background-image: url(../img/kunai.png);
   animation: kunai 1s;
+}
+
+div.staticPlayer1 {
+  background-color: var(--color-playerOne);
+  background-image: url(../img/shuriken.png);
+}
+
+div.staticPlayer2 {
+  background-color: var(--color-playerTwo);
+  background-image: url(../img/kunai.png);
 }
 
 div.hidden {
