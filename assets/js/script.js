@@ -51,6 +51,8 @@ const insertBall = e => {
         }
 
         winHorizontal(gamePlay,rowPosition);
+        winVertical(gamePlay);
+        winDiagonal(gamePlay);
         changePlayer();
     }
 }

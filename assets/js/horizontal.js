@@ -1,5 +1,5 @@
 const winHorizontal = (gamePlay,rowPosition)=>{
-    let colSelected = gamePlay[rowPosition]
+    let colSelected = gamePlay[rowPosition];
 
     colSelected.forEach((cell,index)=>{
         if(cell !== 0) {
@@ -11,9 +11,9 @@ const winHorizontal = (gamePlay,rowPosition)=>{
                 (cell === colSelected[index+3])
             ) {
                 if(cell===1){
-                    console.log("player1")
+                    console.log("player1");
                 }else if (cell===2){
-                    console.log("player2")
+                    console.log("player2");
                 }
             }
         }
