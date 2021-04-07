@@ -27,7 +27,7 @@ const makeBall = () => {
 
 // let rowPosition = 0;
 // let colPosition = 0;
-
+let count = 0;
 const insertBall = e => {
     let rowPosition = 0;
     let colPosition = 0;
@@ -53,11 +53,12 @@ const insertBall = e => {
         }
 
         gameConditions(gamePlay);
+        count = gameDraw(count);
         changePlayer();
     }
 }
 
-const columns = document.querySelectorAll(".col");
+let columns = document.querySelectorAll(".col");
 columns.forEach((current) => {
     current.addEventListener('click', insertBall);
 });
