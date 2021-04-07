@@ -232,7 +232,7 @@ span#timer {
 }
 
 .vanish {
-  animation: vanish 500ms;
+  animation: vanish 1s;
 }
 
 /* game and popUp  */
