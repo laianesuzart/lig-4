@@ -118,6 +118,12 @@ div#gameTable {
 div.col {
   display: flex;
   flex-direction: column;
+  padding: 8px 4px;
+  transition: all 300ms ease-in-out;
+}
+
+div.col:hover {
+  background-color: #FFF;
 }
 
 div.row {
@@ -125,7 +131,7 @@ div.row {
   height: 30px;
   border-radius: 50%;
   background-color: #024ca1b9;
-  margin: 0 4px 4px 0;
+  margin-bottom: 4px;
 }
 
 /* game and popUp  */
