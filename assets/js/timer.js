@@ -17,4 +17,3 @@ const setTimer = (counter) => {
     }
     return timeID;
 }
-
