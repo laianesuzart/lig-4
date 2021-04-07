@@ -55,6 +55,8 @@ const insertBall = e => {
         gameConditions(gamePlay);
         count = gameDraw(count);
         changePlayer();
+        clearTimeout(timeID)
+        setTimer(15)
     }
 }
 
