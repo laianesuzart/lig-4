@@ -7,6 +7,11 @@ const text = document.getElementById('text');
 const exitBtn = document.getElementById('exitBtn');
 const bgm = document.getElementById('bgm');
 const hoverBip = document.getElementById('hoverBip');
+const mainPanel = document.getElementById('mainPanel');
+const chooseNamesBtn = document.getElementById('chooseNamesBtn');
+const startBtn = document.getElementById('startBtn');
+const chooseNames = document.getElementById('chooseNames');
+const selectedNamesBtn = document.getElementById('selectedNamesBtn');
 
 bgm.volume = 0.3;
 hoverBip.volume = 0.2;
@@ -49,3 +54,24 @@ audioBtn.addEventListener('click', () => {
 });
 
 audioBtn.addEventListener('mouseenter', playBip);
+
+chooseNamesBtn.addEventListener('mouseenter', playBip);
+
+chooseNamesBtn.addEventListener('click', () => {
+    chooseNames.classList.remove('hidden');
+});
+
+startBtn.addEventListener('mouseenter', playBip);
+
+startBtn.addEventListener('click', () => {
+    mainPanel.classList.add('vanish');
+    setTimeout(() => {
+        mainPanel.classList.add('hidden');
+    }, 2000);
+});
+
+selectedNamesBtn.addEventListener('mouseenter', playBip);
+
+selectedNamesBtn.addEventListener('click', () => {
+    chooseNames.classList.add('hidden');
+});
