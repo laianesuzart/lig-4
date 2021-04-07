@@ -10,7 +10,10 @@ const setTimer = (counter) => {
         currentPlayer = changePlayer(currentPlayer);
         clearTimeout(timeID);
         counter = 15;
-        setTimer(counter)
+        setTimer(counter);
+        setTimeout(() => {
+            changeTurn();
+        }, 1000);
     }
     return timeID;
 }
