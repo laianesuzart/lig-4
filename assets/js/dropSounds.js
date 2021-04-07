@@ -4,7 +4,7 @@ const dropSounds = {
 }
 
 for (let audio in dropSounds) {
-   dropSounds[audio].volume = 0.2;
+   dropSounds[audio].volume = 0.5;
 }
 
 const playSound = audio => audio.play();
