@@ -23,15 +23,17 @@
 const verticalCondition = (gamePlay,edgeY,indexRow,cell,indexCol)=>{
     if (cell!==0) {
         if (indexRow < edgeY) {
-            if (
-                cell === gamePlay[indexRow + 1][indexCol]
-                &&
-                cell === gamePlay[indexRow + 2][indexCol]
-                &&
-                cell === gamePlay[indexRow + 3][indexCol]
-            ) {
+            let countWinVertical = 0;
+            for(let i=1;i<=3;i++){
+                if(cell === gamePlay[indexRow + i][indexCol]){
+                    countWinVertical++
+                }
+            }
+
+            if(countWinVertical===3){
                 endGamePopUp(cell);
             }
+
         }
     }
 }

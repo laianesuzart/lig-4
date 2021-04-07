@@ -1,10 +1,10 @@
-const gameDraw = (count) => {
-    if (count === 41) {
+const gameDraw = (playCount) => {
+    if (playCount === 41) {
         endGamePopUpDraw();
     }else{
-        count++;
+        playCount++;
     }
-    return count;
+    return playCount;
 };
 
 const endGamePopUpDraw =()=>{
