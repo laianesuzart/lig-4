@@ -1,13 +1,22 @@
 
 const reset =()=>{
-    let popUp=document.getElementById("endGamePopUp");
+    let popUp = document.getElementById("endGamePopUp");
     popUp.classList.add("hidden");
     let columns = document.querySelectorAll(".col");
     columns.forEach(col=>{
         let colChildArray = Array.from(col.children)
         colChildArray.forEach(row => row.innerHTML ="")
     })
-    count=0
+    count = 0
+
+    gamePlay = [
+        [0,0,0,0,0,0,0],
+        [0,0,0,0,0,0,0],
+        [0,0,0,0,0,0,0],
+        [0,0,0,0,0,0,0],
+        [0,0,0,0,0,0,0],
+        [0,0,0,0,0,0,0]
+    ]
 }
 
 const buttonReset = document.getElementById("reset")
