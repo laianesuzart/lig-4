@@ -144,6 +144,21 @@ div#playerTurn {
   padding: 4px;
 }
 
+div.playerName {
+  display: flex;
+  align-items: center;
+}
+
+span#p1name {
+  color: var(--color-playerOne);
+  margin-left: 6px;
+}
+
+span#p2name {
+  color: var(--color-playerTwo);
+  margin-right: 6px;
+}
+
 div.turnIcon {
   display: flex;
   justify-content: center;
@@ -158,6 +173,14 @@ div.turnIcon {
 
 span#timer {
   font-size: 0.6rem;
+}
+
+.turnRight {
+  animation: turnRight 500ms;
+}
+
+.turnLeft {
+  animation: turnLeft 500ms;
 }
 
 /* game and popUp  */
