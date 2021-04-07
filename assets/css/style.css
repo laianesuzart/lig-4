@@ -264,19 +264,19 @@ footer {
 
 @keyframes shuriken {
   from {
-    transform: rotate(0);
+    transform: translateY(-180px) rotate(0);
   }
   to {
-    transform: rotate(360deg);
+    transform: translateY(0) rotate(360deg);
   }
 }
 
 @keyframes kunai {
   from {
-    transform: rotate(0);
+    transform:  translateY(-180px) rotate(0);
   }
   to {
-    transform: rotate(-45deg);
+    transform:  translateY(0) rotate(-45deg);
   }
 }
 
