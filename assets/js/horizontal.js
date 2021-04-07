@@ -1,27 +1,44 @@
-const winHorizontal = (gamePlay,rowPosition)=>{
-    let colSelected = gamePlay[rowPosition];
+// const winHorizontal = (gamePlay,rowPosition)=>{
+//     let rowSelected = gamePlay[rowPosition];
+//     let edgeX = gamePlay[0].length-3;
+//
+//     rowSelected.forEach((cell,index)=>{
+//         if(index<edgeX && cell !== 0) {
+//             if(
+//                 (cell === rowSelected[index+1])
+//                 &&
+//                 (cell === rowSelected[index+2])
+//                 &&
+//                 (cell === rowSelected[index+3])
+//             ) {
+//                 console.log(`Player${cell} won Horizontal`);
+//             }
+//         }
+//     })
+// }
 
-    colSelected.forEach((cell,index)=>{
-        if(cell !== 0) {
-            if(
-                (cell === colSelected[index+1])
+const horizontalCondition = (gamePlay,edgeX,indexRow,cell,indexCol)=>{
+    if(cell !== 0) {
+        if (indexCol < edgeX) {
+            if (
+                (cell === gamePlay[indexRow][indexCol + 1])
                 &&
-                (cell === colSelected[index+2])
+                (cell === gamePlay[indexRow][indexCol + 2])
                 &&
-                (cell === colSelected[index+3])
+                (cell === gamePlay[indexRow][indexCol + 3])
             ) {
-                if(cell===1){
-                    console.log("player1");
-                }else if (cell===2){
-                    console.log("player2");
-                }
+                console.log(`Player${cell} won Horizontal`);
             }
         }
-    })
+    }
 }
 
-// columns.forEach((current) => {
-//     current.addEventListener('click', ()=>{
-//         winHorizontal(gamePlay, rowPosition);
-//     });
-// });
+
+// const winHorizontal = gamePlay=>{
+//     let edgeX = gamePlay[0].length-3;
+//     gamePlay.forEach((row,indexRow)=>{
+//         row.forEach((cell,indexCol)=>{
+//             horizontalCondition(gamePlay,edgeX,indexRow,cell,indexCol);
+//         })
+//     })
+// }
