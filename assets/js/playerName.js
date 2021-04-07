@@ -4,12 +4,13 @@ const p1nameDisplay = document.getElementById('p1name');
 const p2nameDisplay = document.getElementById('p2name');
 
 const getPlayersName = () => {
-    const player1Name = p1nameInput.value;
-    const player2Name = p2nameInput.value;
+    const player1Name = p1nameInput.value.trim();
+    const player2Name = p2nameInput.value.trim();
 
     if (player1Name !== '') {
         p1nameDisplay.innerText = player1Name;
     }
+
     if (player2Name !== '') {
         p2nameDisplay.innerText = player2Name;
     }

@@ -1,13 +1,18 @@
-const reset =()=>{
-    let popUp = document.getElementById("endGamePopUp");
-    popUp.classList.add("hidden");
+const homePgBtn = document.getElementById('homePgBtn');
+const buttonReset = document.getElementById("reset");
+
+const reset = () => {
+    setTimeout(() => {
+        endGamePopUp.classList.add("hidden");
+    }, 1000);
+    
 
     columns.forEach(col=>{
-        let colChildArray = Array.from(col.children)
-        colChildArray.forEach(row => row.innerHTML ="")
-    })
+        let colChildArray = Array.from(col.children);
+        colChildArray.forEach(row => row.innerHTML ="");
+    });
 
-    playCount = 0
+    playCount = 0;
 
     currentPlayer = 'player1';
 
@@ -18,12 +23,21 @@ const reset =()=>{
         [0,0,0,0,0,0,0],
         [0,0,0,0,0,0,0],
         [0,0,0,0,0,0,0]
-    ]
+    ];
+
+    clearTimeout(timeID);
+    setTimer(15);
+    changeTurn();
 }
 
-const buttonReset = document.getElementById("reset")
-buttonReset.addEventListener("click",reset)
+const goToHomePg = () => {
+
+}
+
+buttonReset.addEventListener("click",reset);
 buttonReset.addEventListener('mouseenter', playBip);
+
+homePgBtn.addEventListener('mouseenter', playBip);
 
 // let col = e.currentTarget;
 // let colChildArray = Array.from(col.children)

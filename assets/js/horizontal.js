@@ -28,7 +28,7 @@ const horizontalCondition = (gamePlay,edgeX,indexRow,cell,indexCol)=>{
             }
 
             if (countWinHorizontal===3) {
-                endGamePopUp(cell);
+                showEndGamePopUp(cell);
             }
         }
     }

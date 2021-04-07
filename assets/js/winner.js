@@ -1,6 +1,8 @@
-const endGamePopUp = (cell)=>{
-    let winner = document.getElementById("winner");
+const endGamePopUp = document.getElementById("endGamePopUp");
+const winner = document.getElementById("winner");
+
+const showEndGamePopUp = (cell)=>{
+    
     winner.innerText = `Player ${cell} `
-    let popUp=document.getElementById("endGamePopUp");
-    popUp.classList.remove("hidden");
+    endGamePopUp.classList.remove("hidden");
 }
