@@ -27,7 +27,7 @@ const horizontalCondition = (gamePlay,edgeX,indexRow,cell,indexCol)=>{
                 &&
                 (cell === gamePlay[indexRow][indexCol + 3])
             ) {
-                console.log(`Player${cell} won Horizontal`);
+                endGamePopUp(cell);
             }
         }
     }

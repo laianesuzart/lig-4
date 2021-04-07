@@ -30,7 +30,7 @@ const verticalCondition = (gamePlay,edgeY,indexRow,cell,indexCol)=>{
                 &&
                 cell === gamePlay[indexRow + 3][indexCol]
             ) {
-                console.log(`Player${cell} won Vertical`);
+                endGamePopUp(cell);
             }
         }
     }

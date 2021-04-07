@@ -47,7 +47,7 @@ const diagonalDownRightCondition = (gamePlay,edgeX,edgeY,indexRow,cell,indexCol)
                 &&
                 cell === gamePlay[indexRow + 3][indexCol + 3]
             ) {
-                console.log(`Player${cell} won diagonal`);
+                endGamePopUp(cell);
             }
         }
     }
@@ -63,7 +63,7 @@ const diagonalDownLeftCondition = (gamePlay,edgeX,edgeY,indexRow,cell,indexCol)=
                 &&
                 cell === gamePlay[indexRow - 3][indexCol + 3]
             ) {
-                console.log(`Player${cell} won diagonal`);
+                endGamePopUp(cell);
             }
         }
     }
