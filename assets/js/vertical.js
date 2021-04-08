@@ -31,7 +31,7 @@ const verticalCondition = (gamePlay,edgeY,indexRow,cell,indexCol)=>{
             }
 
             if(countWinVertical===3){
-                endGamePopUp(cell);
+                showEndGamePopUp(cell);
             }
 
         }

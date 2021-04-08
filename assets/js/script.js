@@ -129,6 +129,9 @@ const mainGame =(e)=>{
     currentPlayer = changePlayer(currentPlayer);
     clearTimeout(timeID);
     setTimer(15);
+    setTimeout(() => {
+        changeTurn();
+    }, 1000);
 }
 
 const columns = document.querySelectorAll(".col");
