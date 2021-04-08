@@ -22,4 +22,3 @@ const gameConditions = gamePlay => {
         });
     });
 };
-
