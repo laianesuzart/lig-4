@@ -65,10 +65,11 @@ startBtn.addEventListener('mouseenter', playBip);
 
 startBtn.addEventListener('click', () => {
     mainPanel.classList.add('vanish');
+    clearTimeout(timeID);
+    setTimer(15);
     setTimeout(() => {
         mainPanel.classList.add('hidden');
-    }, 500);
-    setTimer(15);
+    }, 1000);
 });
 
 selectedNamesBtn.addEventListener('mouseenter', playBip);

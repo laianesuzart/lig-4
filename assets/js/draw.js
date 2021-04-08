@@ -1,16 +1,19 @@
+const howard = document.getElementById('howard');
+const result = document.getElementById("result");
+const winner = document.getElementById("winner");
+
 const gameDraw = (playCount) => {
     if (playCount === 41) {
         endGamePopUpDraw();
-    }else{
+    } else {
         playCount++;
     }
     return playCount;
 };
 
 const endGamePopUpDraw =()=>{
-    let result = document.getElementById("result");
-    result.innerHTML = "";
-    result.innerText ="Empate!";
-    let popUp=document.getElementById("endGamePopUp");
-    popUp.classList.remove("hidden");
+    winner.innerText = '';
+    howard.src = '../assets/img/happyHoward.png'
+    result.innerText = "Derrotados pelo Hokage Howard! Mwahaha";
+    endGamePopUp.classList.remove("hidden");
 }

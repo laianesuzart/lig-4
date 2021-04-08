@@ -49,7 +49,7 @@ const diagonalDownRightCondition = (gamePlay,edgeX,edgeY,indexRow,cell,indexCol)
             }
 
             if (countWinDiagonalDownRight===3) {
-                endGamePopUp(cell);
+                showEndGamePopUp(cell);
             }
         }
     }
@@ -67,7 +67,7 @@ const diagonalDownLeftCondition = (gamePlay,edgeX,edgeY,indexRow,cell,indexCol)=
             }
 
             if (countDiagonalDownLeft===3) {
-                endGamePopUp(cell);
+                showEndGamePopUp(cell);
             }
         }
     }
