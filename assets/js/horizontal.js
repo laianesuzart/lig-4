@@ -21,17 +21,30 @@ const horizontalCondition = (gamePlay,edgeX,indexRow,cell,indexCol)=>{
     if(cell !== 0) {
         if (indexCol < edgeX) {
             let countWinHorizontal = 0;
+
+            savePositions = [[indexRow, indexCol]];
+            let position = [];
             for(let i=1;i<=3;i++){
+                position = [];
                 if (cell === gamePlay[indexRow][indexCol + i]){
                     countWinHorizontal++;
+
+                    position.push(indexRow);
+                    position.push(indexCol + i);
                 }
+
+                savePositions.push(position);
             }
 
             if (countWinHorizontal===3) {
-                showEndGamePopUp(cell);
+                positions = savePositions;
+                
+                return true;
             }
         }
     }
+
+    return false;
 }
 
 

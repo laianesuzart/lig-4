@@ -62,6 +62,7 @@
 // columns.forEach((current) => {
 //     current.addEventListener('click', insertBall);
 // });
+let positions = [];
 
 let currentPlayer = 'player1';
 let playCount = 0;

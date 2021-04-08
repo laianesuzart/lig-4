@@ -24,18 +24,30 @@ const verticalCondition = (gamePlay,edgeY,indexRow,cell,indexCol)=>{
     if (cell!==0) {
         if (indexRow < edgeY) {
             let countWinVertical = 0;
+
+            savePositions = [[indexRow, indexCol]];
+            let position = [];
             for(let i=1;i<=3;i++){
+                position = [];
                 if(cell === gamePlay[indexRow + i][indexCol]){
                     countWinVertical++
+                    position.push(indexRow + i);
+                    position.push(indexCol);
                 }
+
+                savePositions.push(position);
             }
 
             if(countWinVertical===3){
-                showEndGamePopUp(cell);
+                positions = savePositions;
+
+                return true;
             }
 
         }
     }
+
+    return false;
 }
 
 // const winVertical = gamePlay=>{
