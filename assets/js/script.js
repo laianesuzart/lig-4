@@ -85,16 +85,17 @@ const makeBall = (currentPlayer) => {
 
 const insertBallRowPosition = (col,colChildArray,currentPlayer) => {
     let rowPosition = 0;
-    if(isColNotFull(col)) {
-        const ball = makeBall(currentPlayer);
-        playSound(dropSounds[currentPlayer]);
-        colChildArray.forEach((cell,index)=>{
-            if (cell.childElementCount === 0) {
-                cell.appendChild(ball);
-                rowPosition = index;
-            }
-        });
-    }
+
+
+    const ball = makeBall(currentPlayer);
+    playSound(dropSounds[currentPlayer]);
+    colChildArray.forEach((cell,index)=>{
+        if (cell.childElementCount === 0) {
+            cell.appendChild(ball);
+            rowPosition = index;
+        }
+    });
+
     return rowPosition;
 }
 
@@ -121,18 +122,20 @@ const mainGame =(e)=>{
     let col = e.currentTarget;
     let colChildArray = Array.from(col.children)
     let colPosition = col.dataset.column;
-    let rowPosition = insertBallRowPosition(col,colChildArray,currentPlayer);
+    
+    if(isColNotFull(col)) {
+        let rowPosition = insertBallRowPosition(col,colChildArray,currentPlayer);
+        gamePlay = updateGamePlay(gamePlay,currentPlayer,rowPosition,colPosition);
+        gameConditions(gamePlay);
 
-    gamePlay = updateGamePlay(gamePlay,currentPlayer,rowPosition,colPosition);
-    gameConditions(gamePlay);
-
-    playCount = gameDraw(playCount);
-    currentPlayer = changePlayer(currentPlayer);
-    clearTimeout(timeID);
-    setTimer(15);
-    setTimeout(() => {
-        changeTurn();
-    }, 1000);
+        playCount = gameDraw(playCount);
+        currentPlayer = changePlayer(currentPlayer);
+        clearTimeout(timeID);
+        setTimer(15);
+        setTimeout(() => {
+            changeTurn();
+        }, 1000);
+    }
 }
 
 const columns = document.querySelectorAll(".col");
