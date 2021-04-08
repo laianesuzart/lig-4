@@ -19,8 +19,12 @@
 
 /* body */
 body::after {
-  position:absolute; width:0; height:0; overflow:hidden; z-index:-1;
-  content:url(../img/menu.png) url(../img/menu-pc.webp) url(../img/mainPanelBg.jpg) url(../img/endGameBg.jpg) url(../img/sadHoward.png) url(../img/itachi.gif) url(../img/konoha.gif);
+  position: absolute; 
+  width: 0;
+  height: 0; 
+  overflow: hidden; 
+  z-index: -1;
+  content: url(../img/akatsuki.png) url(../img/mobile.jpg) url(../img/desktop.jpg)  url(../fonts/ninja_naruto/njnaruto.ttf) url(../img/arrowLeft.png) url(../img/arrowRight.png) url(../img/konoha-gate.jpg) url(../img/kunai.png) url(../img/shuriken.png) url(../img/menu.png) url(../img/menu-pc.webp) url(../img/mainPanelBg.jpg) url(../img/endGameBg.jpg) url(../img/sadHoward.png) url(../img/itachi.gif) url(../img/konoha.gif);
 }
 
 body {

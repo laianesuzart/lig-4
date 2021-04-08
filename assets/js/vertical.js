@@ -1,34 +1,16 @@
-// const winVertical = gamePlay => {
-//   const edgeY = gamePlay.length - 3;
-//
-//   for(let y = 0; y < edgeY; y++){
-//
-//     for(let x = 0; x < gamePlay[0].length; x++) {
-//       letter = gamePlay[y][x];
-//       if(letter !== 0) {
-//         if(
-//           letter === gamePlay[y+1][x]
-//           &&
-//           letter === gamePlay[y+2][x]
-//           &&
-//           letter === gamePlay[y+3][x]
-//           ) {
-//           console.log(`${letter} won`);
-//         }
-//       }
-//     }
-//   }
-// };
+const verticalCondition = (gamePlay, edgeY, indexRow, cell, indexCol) => {
 
-const verticalCondition = (gamePlay,edgeY,indexRow,cell,indexCol)=>{
     if (cell!==0) {
+
         if (indexRow < edgeY) {
             let countWinVertical = 0;
-
             savePositions = [[indexRow, indexCol]];
             let position = [];
-            for(let i=1;i<=3;i++){
+            let sameBall = 3;
+
+            for(let i = 1; i <= sameBall; i++) {
                 position = [];
+
                 if(cell === gamePlay[indexRow + i][indexCol]){
                     countWinVertical++
                     position.push(indexRow + i);
@@ -38,7 +20,7 @@ const verticalCondition = (gamePlay,edgeY,indexRow,cell,indexCol)=>{
                 savePositions.push(position);
             }
 
-            if(countWinVertical===3){
+            if(countWinVertical === sameBall){
                 positions = savePositions;
 
                 return true;
@@ -48,14 +30,4 @@ const verticalCondition = (gamePlay,edgeY,indexRow,cell,indexCol)=>{
     }
 
     return false;
-}
-
-// const winVertical = gamePlay=>{
-//     let edgeY = gamePlay.length - 3;
-//
-//     gamePlay.forEach((row,indexRow)=>{
-//         row.forEach((cell,indexCol)=>{
-//             verticalCondition(gamePlay,edgeY,indexRow,cell,indexCol)
-//         })
-//     })
-// }
+};
