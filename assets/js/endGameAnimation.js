@@ -9,7 +9,6 @@ drawSound.volume = 0.5;
 const drawAnimation = () => {
     endGameAnimationContainer.classList.remove('winBg', 'vanish', 'showUp');
     endGameAnimation.classList.remove('winAnimation');
-<<<<<<< HEAD
     endGameAnimation.classList.add('drawAnimation');
     endGameAnimationContainer.classList.add('drawBg', 'showUp');
 
@@ -30,24 +29,6 @@ const drawAnimation = () => {
     }, 6000);
 
 };
-=======
-
-    endGameAnimation.classList.add('drawAnimation');
-    endGameAnimationContainer.classList.add('drawBg', 'showUp');
-    setTimeout(() => {
-        drawSound.play();
-    }, 1000);
-    setTimeout(() => {
-        endGameAnimationContainer.classList.remove('hidden');
-    }, 2000)
-    setTimeout(() => {
-        endGameAnimationContainer.classList.add('vanish');
-    }, 5000);
-    setTimeout(() => {
-        endGameAnimationContainer.classList.add('hidden');
-    }, 6000);
-}
->>>>>>> 351d327d17ccf8f28d15629f427056f9785b0224
 
 const winAnimation = () => {
     const winPositions = positions;
