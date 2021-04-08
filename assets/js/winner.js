@@ -15,8 +15,13 @@ const showEndGamePopUp = (cell)=>{
         if (playersName[2] !== undefined) {
             winner.innerText = `${playersName[2]} `
         } else {
-            winner.innerText = 'Sakura ';
+            winner.innerText = 'Sasuke ';
         }
     }
-    endGamePopUp.classList.remove("hidden");
+    endGamePopUp.classList.remove('showUp');
+    winAnimation();
+    endGamePopUp.classList.add('showUp');
+    setTimeout(() => {
+        endGamePopUp.classList.remove("hidden");
+    }, 5000);
 }

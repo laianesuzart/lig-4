@@ -26,16 +26,12 @@ const reset = () => {
 }
 
 const hideEndGamePopUp = () => {
-    setTimeout(() => {
-        endGamePopUp.classList.add("hidden");
-    }, 1000);
+    endGamePopUp.classList.add("hidden");
 }
 
 const goToHomePg = () => {
     mainPanel.classList.remove('vanish');
-    setTimeout(() => {
-        mainPanel.classList.remove('hidden');
-    }, 1000);
+    mainPanel.classList.remove('hidden');
 }
 
 buttonReset.addEventListener("click",reset);
