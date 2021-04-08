@@ -11,11 +11,15 @@ const getPlayersName = () => {
     if (player1Name !== '') {
         p1nameDisplay.innerText = player1Name;
         playersName.push(player1Name);
+    } else {
+        playersName.push('Naruto');
     }
 
     if (player2Name !== '') {
         p2nameDisplay.innerText = player2Name;
         playersName.push(player2Name);
+    } else {
+        playersName.push('Sasuke');
     }
 
     return playersName;
