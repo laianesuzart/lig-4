@@ -19,23 +19,35 @@
 //     }
 //   }
 // };
-
 const verticalCondition = (gamePlay,edgeY,indexRow,cell,indexCol)=>{
+    console.log()
     if (cell!==0) {
         if (indexRow < edgeY) {
             let countWinVertical = 0;
-            for(let i=1;i<=3;i++){
+
+            arrayToscratch = [[indexRow,indexCol]];
+            for(let i = 1; i <= 3; i++){
+                let position = [];
+
                 if(cell === gamePlay[indexRow + i][indexCol]){
                     countWinVertical++
+
+                    position.push(indexRow + i);
+                    position.push(indexCol);
                 }
+                arrayToscratch.push(position);
             }
 
-            if(countWinVertical===3){
-                endGamePopUp(cell);
+            if(countWinVertical === 3){
+                // console.log(`linnha ${indexRow} até linha ${indexRow + 4} na coluna ${indexCol}`)
+                victoryPositions = arrayToscratch;
+                return true;
             }
 
         }
     }
+    
+    return false;
 }
 
 // const winVertical = gamePlay=>{
