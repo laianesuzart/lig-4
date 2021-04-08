@@ -9,22 +9,26 @@ drawSound.volume = 0.5;
 const drawAnimation = () => {
     endGameAnimationContainer.classList.remove('winBg', 'vanish', 'showUp');
     endGameAnimation.classList.remove('winAnimation');
-
     endGameAnimation.classList.add('drawAnimation');
     endGameAnimationContainer.classList.add('drawBg', 'showUp');
+
     setTimeout(() => {
         drawSound.play();
     }, 1000);
+
     setTimeout(() => {
         endGameAnimationContainer.classList.remove('hidden');
-    }, 2000)
+    }, 2000);
+
     setTimeout(() => {
         endGameAnimationContainer.classList.add('vanish');
     }, 5000);
+
     setTimeout(() => {
         endGameAnimationContainer.classList.add('hidden');
     }, 6000);
-}
+
+};
 
 const winAnimation = () => {
     const winPositions = positions;
@@ -34,29 +38,35 @@ const winAnimation = () => {
        let colPosition = winPositions[cell][1] + 1;
        let cellParent = document.querySelector(`.col[data-column="${colPosition}"`);
        let winnerCell = cellParent.children[rowPosition];
+       
        setTimeout(() => {
         winnerCell.classList.add('highlight');
        }, 1000);
+
        setTimeout(() => {
         winnerCell.classList.remove('highlight');
        }, 2000);
+
     }
 
     endGameAnimationContainer.classList.remove('drawBg', 'vanish', 'showUp');
     endGameAnimation.classList.remove('drawAnimation');
-
     endGameAnimation.classList.add('winAnimation');
     endGameAnimationContainer.classList.add('winBg', 'showUp');
+
     setTimeout(() => {
         winSound.play();
     }, 2000);
+
     setTimeout(() => {
         endGameAnimationContainer.classList.remove('hidden');
-    }, 2000)
+    }, 2000);
+
     setTimeout(() => {
         endGameAnimationContainer.classList.add('vanish');
     }, 5000);
+
     setTimeout(() => {
         endGameAnimationContainer.classList.add('hidden');
     }, 6000);
-}
+};
