@@ -18,33 +18,20 @@
 // }
 
 const horizontalCondition = (gamePlay,edgeX,indexRow,cell,indexCol)=>{
-
     if(cell !== 0) {
         if (indexCol < edgeX) {
-
             let countWinHorizontal = 0;
-            arrayToscratch = [[indexRow,indexCol]];
-            for(let i=1 ; i<= 3; i++) {
-                let position = [];
-
+            for(let i=1;i<=3;i++){
                 if (cell === gamePlay[indexRow][indexCol + i]){
                     countWinHorizontal++;
-
-                    position.push(indexRow);
-                    position.push(indexCol + i);
                 }
-
-                arrayToscratch.push(position);
             }
 
             if (countWinHorizontal===3) {
-                victoryPositions = arrayToscratch;
-                return true;
+                endGamePopUp(cell);
             }
         }
     }
-
-    return false;
 }
 
 

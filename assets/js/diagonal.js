@@ -42,28 +42,17 @@ const diagonalDownRightCondition = (gamePlay,edgeX,edgeY,indexRow,cell,indexCol)
         if (indexRow < edgeY && indexCol < edgeX) {
             let countWinDiagonalDownRight = 0;
 
-            arrayToscratch = [[indexRow,indexCol]];
             for (let i=1;i<=3;i++){
-                let position = [];
-
                 if (cell === gamePlay[indexRow + i][indexCol + i]){
                     countWinDiagonalDownRight++;
-                    position.push(indexRow + i);
-                    position.push(indexCol + i);
                 }
-
-                arrayToscratch.push(position);
             }
 
             if (countWinDiagonalDownRight===3) {
-                victoryPositions = arrayToscratch;
-
-                return true;
+                endGamePopUp(cell);
             }
         }
     }
-
-    return false;
 }
 
 const diagonalDownLeftCondition = (gamePlay,edgeX,edgeY,indexRow,cell,indexCol)=>{
@@ -71,30 +60,17 @@ const diagonalDownLeftCondition = (gamePlay,edgeX,edgeY,indexRow,cell,indexCol)=
         if (indexRow >= edgeY && indexRow < gamePlay.length && indexCol < edgeX) {
             let countDiagonalDownLeft = 0;
 
-            arrayToscratch = [[indexRow,indexCol]];
-
             for(let i=1;i<=3;i++){
-                let position = [];
-
                 if (cell === gamePlay[indexRow - i][indexCol + i]){
                     countDiagonalDownLeft++;
-
-                    position.push(indexRow - i);
-                    position.push(indexCol + i);
                 }
-                arrayToscratch.push(position);
-
             }
 
             if (countDiagonalDownLeft===3) {
-                victoryPositions = arrayToscratch;
-
-                return true;
+                endGamePopUp(cell);
             }
         }
     }
-
-    return false;
 }
 
 // const winDiagonal = gamePlay => {
