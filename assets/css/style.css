@@ -12,16 +12,15 @@
 
 :root {
   --color-playerOne: #F05321;
-  --color-playerTwo: #f072ac;
+  --color-playerTwo: #2B316F;
   --color-text: #aa130f;
   --bg-color: #024da1;
 }
 
 /* body */
-
 body::after {
   position:absolute; width:0; height:0; overflow:hidden; z-index:-1;
-  content:url(../img/menu.png) url(../img/menu-pc.webp) url(../img/mainPanelBg.jpg) url(../img/endGameBg.jpg);
+  content:url(../img/menu.png) url(../img/menu-pc.webp) url(../img/mainPanelBg.jpg) url(../img/endGameBg.jpg) url(../img/sadHoward.png) url(../img/itachi.gif) url(../img/konoha.gif);
 }
 
 body {
@@ -239,6 +238,14 @@ span#timer {
   animation: vanish 1s;
 }
 
+.showUp {
+  animation: showUp 1s;
+}
+
+.highlight {
+  animation: highlight 1s;
+}
+
 /* game and popUp  */
 div.popUp {
   display: flex;
@@ -255,6 +262,41 @@ div.popUp {
   background-repeat: no-repeat;
   background-position: center;
   padding: 20px;
+}
+
+div.endGameAnimationContainer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+}
+
+div.endGameAnimation {
+  position: absolute;
+  top: 60%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-size: contain;
+  background-repeat: no-repeat;
+  height: 170px;
+  width: 300px;
+}
+
+div.winAnimation {
+  background-image: url(../img/itachi.gif);
+}
+
+div.drawAnimation {
+  background-image: url(../img/konoha.gif);
+}
+
+div.winBg {
+  background-color: #000;
+}
+
+div.drawBg {
+  background-color: #024da1;
 }
 
 div.endGame {
@@ -284,6 +326,7 @@ div.popUpContainer {
 }
 
 div.popUpContainer p {
+  text-align: center;
   background-color: var(--color-text);
   padding: 10px 4px;
   margin-bottom: 10px;
@@ -390,6 +433,24 @@ footer {
   }
   to {
     transform: rotate(0);
+  }
+}
+
+@keyframes showUp {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes highlight {
+  from {
+    transform: scale(1) rotate(0);
+  }
+  to {
+    transform: scale(1.2) rotate(360deg);
   }
 }
 

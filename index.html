@@ -20,9 +20,11 @@
 
     <div class="mainContainer">
       <audio src="./assets/audio/bgm.mp3" id="bgm" loop preload="auto"></audio>
-      <audio src="./assets/audio/hoverBtn.mp3" id="hoverBip" preload="auto"></audio>
+      <audio src="./assets/audio/bip.mp3" id="hoverBip" preload="auto"></audio>
       <audio src="./assets/audio/shuriken.mp3" id="shurikenSound" preload="auto"></audio>
       <audio src="./assets/audio/kunai.mp3" id="kunaiSound" preload="auto"></audio>
+      <audio src="./assets/audio/win.mp3" id="winSound" preload="auto"></audio>
+      <audio src="./assets/audio/draw.mp3" id="drawSound" preload="auto"></audio>
     
       <aside>
         <img class="hokage" src="./assets/img/happyHoward.png" alt="Happy Hokage">
@@ -114,7 +116,7 @@
             <span id="timer"></span>
           </div>
           <div class="playerName">
-            <span id="p2name">Sakura</span>
+            <span id="p2name">Sasuke</span>
             <div class="ball staticPlayer2"></div>
           </div>
 
@@ -126,6 +128,11 @@
       <p id="text"></p>
       <button id="exitBtn">OK</button>
     </div>
+
+    <div id="endGameAnimationContainer" class="endGameAnimationContainer hidden">
+      <div id="endGameAnimation" class="endGameAnimation"></div>
+    </div>
+   
 
     <div id="endGamePopUp" class="endGame hidden">
       <div class="popUpContainer">
@@ -145,15 +152,17 @@
   <script src="./assets/js/vertical.js"></script>
   <script src="./assets/js/horizontal.js"></script>
   <script src="./assets/js/diagonal.js"></script>
-  <script src="./assets/js/draw.js"></script>
   <script src="./assets/js/playerName.js"></script>
   <script src="./assets/js/currentPlayer.js"></script>
   <script src="./assets/js/timer.js"></script>
   <script src="./assets/js/menu.js"></script>
   <script src="./assets/js/dropSounds.js"></script>
+  <script src="./assets/js/endGameAnimation.js"></script>
   <script src="./assets/js/gameConditions.js"></script>
+  <script src="./assets/js/draw.js"></script>
   <script src="./assets/js/reset.js"></script>
   <script src="./assets/js/winner.js"></script>
+  
 
 </body>
 </html>

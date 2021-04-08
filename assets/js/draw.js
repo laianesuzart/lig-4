@@ -12,8 +12,13 @@ const gameDraw = (playCount) => {
 };
 
 const endGamePopUpDraw =()=>{
+    endGamePopUp.classList.remove('showUp');
     winner.innerText = '';
     howard.src = '../assets/img/happyHoward.png'
     result.innerText = "Derrotados pelo Hokage Howard! Mwahaha";
-    endGamePopUp.classList.remove("hidden");
+    drawAnimation();
+    endGamePopUp.classList.add('showUp');
+    setTimeout(() => {
+        endGamePopUp.classList.remove("hidden");
+    }, 5000);  
 }
