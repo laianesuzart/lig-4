@@ -6,17 +6,9 @@ const showEndGamePopUp = (cell) => {
     howard.src = '../lig-4/assets/img/sadHoward.png';
 
     if (cell === 1) {
-        if (playersName[1] !== undefined) {
-            winner.innerText = `${playersName[1]} `
-        } else {
-            winner.innerText = 'Naruto ';
-        }
+        winner.innerText = `${playersName[1]} `;
     } else {
-        if (playersName[2] !== undefined) {
-            winner.innerText = `${playersName[2]} `
-        } else {
-            winner.innerText = 'Sasuke ';
-        }
+        winner.innerText = `${playersName[2]} `;
     }
 
     endGamePopUp.classList.remove('showUp');

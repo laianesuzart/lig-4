@@ -64,6 +64,7 @@ chooseNamesBtn.addEventListener('click', () => {
 startBtn.addEventListener('mouseenter', playBip);
 
 startBtn.addEventListener('click', () => {
+    shinraTensei();
     mainPanel.classList.add('vanish');
     clearTimeout(timeID);
     setTimer(15);
