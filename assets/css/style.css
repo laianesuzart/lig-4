@@ -14,7 +14,6 @@
   --color-playerOne: #F05321;
   --color-playerTwo: #f072ac;
   --color-text: #aa130f;
-  --background-gameTable: rgba(0, 0, 0, 0.267);
   --bg-color: #024da1;
 }
 
@@ -22,7 +21,7 @@
 
 body::after {
   position:absolute; width:0; height:0; overflow:hidden; z-index:-1;
-  content:url(../img/menu.png) url(../img/menu-pc.webp);
+  content:url(../img/menu.png) url(../img/menu-pc.webp) url(../img/mainPanelBg.jpg) url(../img/endGameBg.jpg);
 }
 
 body {
@@ -112,10 +111,10 @@ img.hokage {
 main {
   display: flex;
   flex-direction: column;
-  padding: 0 20px 40px;
-  background-color: var(--background-gameTable);
+  padding: 0 20px;
   max-width: 600px;
   position: relative;
+  background-color: #87ceeb99;
 }
 
 div.mainPanel {
@@ -124,17 +123,22 @@ div.mainPanel {
   bottom: 0;
   left: 0;
   right: 0;
-  background-color: var(--color-text);
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  background-image: url(../img/mainPanelBg.jpg);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position-x: center;
+  background-color: #000;
 }
 
 div.mainPanel button {
   padding: 4px;
   border: 4px double #000;
   margin-bottom: 10px;
+  background-color: var(--color-text);
 }
 
 div.mainPanel button:hover {
@@ -148,6 +152,7 @@ div.chooseNames {
   align-items: center;
   position: absolute;
   background-color: var(--color-text);
+  padding: 10px;
 }
 
 input {
@@ -157,12 +162,11 @@ input {
   outline: none;
   border: none;
   border-radius: 4px;
-  width: 200px;
+  width: 120px;
 }
 
 div#gameTable {
   display: flex;
-  margin: 40px auto 0;
 }
 
 div.col {
@@ -270,16 +274,35 @@ div.popUpContainer {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding-top: 40px;
-  background-color: #376d9ca8;
+  padding: 20px 0;
   max-width: 800px;
   margin: 0 auto;
+  background-image: url(../img/endGameBg.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  filter: drop-shadow(2px 4px 6px black);
 }
 
 div.popUpContainer p {
   background-color: var(--color-text);
   padding: 10px 4px;
   margin-bottom: 10px;
+}
+
+div.popUpContainer button {
+  background-color: var(--color-text);
+  margin-bottom: 10px;
+  padding: 4px;
+  border: 4px double #000;
+}
+
+div.popUpContainer button:hover {
+  color: #fcba21;
+  border-color: #fcba21;
+}
+
+span#winner {
+  font-size: 1.2rem;
 }
 
 div.ball {
@@ -382,6 +405,10 @@ footer {
     font-size: 1.5rem;
   }
   
+  main {
+    background-color: transparent;
+  }
+
   img.hokage {
     width: 120px;
   }
