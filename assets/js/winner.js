@@ -1,9 +1,9 @@
 const endGamePopUp = document.getElementById("endGamePopUp");
 
-const showEndGamePopUp = (cell)=>{
+const showEndGamePopUp = (cell) => {
     const playersName = getPlayersName();
     result.innerText = 'venceu e deixou a vila!';
-    howard.src = '../assets/img/sadHoward.png'
+    howard.src = '../lig-4/assets/img/sadHoward.png';
 
     if (cell === 1) {
         if (playersName[1] !== undefined) {
@@ -15,8 +15,15 @@ const showEndGamePopUp = (cell)=>{
         if (playersName[2] !== undefined) {
             winner.innerText = `${playersName[2]} `
         } else {
-            winner.innerText = 'Sakura ';
+            winner.innerText = 'Sasuke ';
         }
     }
-    endGamePopUp.classList.remove("hidden");
-}
+
+    endGamePopUp.classList.remove('showUp');
+    winAnimation();
+    endGamePopUp.classList.add('showUp');
+
+    setTimeout(() => {
+        endGamePopUp.classList.remove("hidden");
+    }, 5000);
+};

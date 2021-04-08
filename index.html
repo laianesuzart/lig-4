@@ -12,20 +12,27 @@
   <link rel="stylesheet" href="./assets/css/style.css">
 </head>
 <body>
+
   <div class="container">
+
     <header>
       <h1>Lig-4</h1>
       <h2>Ligue 4 para abandonar a vila!</h2>
     </header>
 
     <div class="mainContainer">
+
       <audio src="./assets/audio/bgm.mp3" id="bgm" loop preload="auto"></audio>
-      <audio src="./assets/audio/hoverBtn.mp3" id="hoverBip" preload="auto"></audio>
+      <audio src="./assets/audio/bip.mp3" id="hoverBip" preload="auto"></audio>
       <audio src="./assets/audio/shuriken.mp3" id="shurikenSound" preload="auto"></audio>
       <audio src="./assets/audio/kunai.mp3" id="kunaiSound" preload="auto"></audio>
+      <audio src="./assets/audio/win.mp3" id="winSound" preload="auto"></audio>
+      <audio src="./assets/audio/draw.mp3" id="drawSound" preload="auto"></audio>
     
       <aside>
+
         <img class="hokage" src="./assets/img/happyHoward.png" alt="Happy Hokage">
+
         <nav>
           <ul class="menu">
             <li><button id="rulesBtn">Regras</button></li>
@@ -33,12 +40,16 @@
             <li><button id="historyBtn">Sobre a vila</button></li>
           </ul>
         </nav>
+
       </aside>
 
       <main>
+
         <div id="mainPanel" class="mainPanel">
+
           <button id="chooseNamesBtn">Escolha o nome</button>
           <button id="startBtn">Jogar</button>
+          
           <div id="chooseNames" class="chooseNames hidden">
             <label for="p1nameInput">Jogador 1:</label>
             <input type="text" id="p1nameInput" maxlength="8">
@@ -46,7 +57,9 @@
             <input type="text" id="p2nameInput" maxlength="8">
             <button id="selectedNamesBtn">Enviar</button>
           </div>
+
         </div>
+
         <div id="gameTable">
           <div class="col" data-column="1">
             <div class="row" data-row="1"></div>
@@ -105,7 +118,9 @@
             <div class="row" data-row="6"></div>
           </div>
         </div>
+
         <div id="playerTurn">
+
           <div class="playerName">
             <div class="ball staticPlayer1"></div>
             <span id="p1name">Naruto</span>
@@ -113,13 +128,15 @@
           <div id="turnIcon" class="turnIcon turnLeft">
             <span id="timer"></span>
           </div>
+
           <div class="playerName">
-            <span id="p2name">Sakura</span>
+            <span id="p2name">Sasuke</span>
             <div class="ball staticPlayer2"></div>
           </div>
 
         </div>
       </main>
+
     </div>
 
     <div id="popUp" class="popUp hidden">
@@ -127,6 +144,10 @@
       <button id="exitBtn">OK</button>
     </div>
 
+    <div id="endGameAnimationContainer" class="endGameAnimationContainer hidden">
+      <div id="endGameAnimation" class="endGameAnimation"></div>
+    </div>
+   
     <div id="endGamePopUp" class="endGame hidden">
       <div class="popUpContainer">
         <img src="./assets/img/sadHoward.png" class="hokage" id="howard" alt="">
@@ -139,21 +160,23 @@
     <footer>
       <p>Renegados de Howard Village</p>
     </footer>
+    
   </div>
 
   <script src="./assets/js/script.js"></script>
   <script src="./assets/js/vertical.js"></script>
   <script src="./assets/js/horizontal.js"></script>
   <script src="./assets/js/diagonal.js"></script>
-  <script src="./assets/js/draw.js"></script>
   <script src="./assets/js/playerName.js"></script>
   <script src="./assets/js/currentPlayer.js"></script>
   <script src="./assets/js/timer.js"></script>
   <script src="./assets/js/menu.js"></script>
   <script src="./assets/js/dropSounds.js"></script>
+  <script src="./assets/js/endGameAnimation.js"></script>
   <script src="./assets/js/gameConditions.js"></script>
+  <script src="./assets/js/draw.js"></script>
   <script src="./assets/js/reset.js"></script>
   <script src="./assets/js/winner.js"></script>
-
+  
 </body>
 </html>
