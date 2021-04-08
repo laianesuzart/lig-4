@@ -1,8 +1,9 @@
 const endGamePopUp = document.getElementById("endGamePopUp");
-const winner = document.getElementById("winner");
 
 const showEndGamePopUp = (cell)=>{
     const playersName = getPlayersName();
+    result.innerText = 'venceu e deixou a vila!';
+    howard.src = '../assets/img/sadHoward.png'
 
     if (cell === 1) {
         if (playersName[1] !== undefined) {
