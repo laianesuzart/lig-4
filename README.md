@@ -1,4 +1,4 @@
-<h1 align="center">Howard Vilagge</h1>
+<h1 align="center">Howard Village</h1>
 <br>
 <p>Projeto feito no primeiro quarter/trimestre no curso Kenzie Academy Brasil!</p>
 <br>
