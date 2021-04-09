@@ -152,7 +152,7 @@ const gameDraw = (playCount) => {
 const endGamePopUpDraw = () => {
     endGamePopUp.classList.remove('showUp');
     winner.innerText = '';
-    howard.src = '../lig-4/assets/img/happyHoward.png';
+    howard.src = '../assets/img/happyHoward.png';
     result.innerText = "Derrotados pelo Hokage Howard! Mwahaha";
     drawAnimation();
     endGamePopUp.classList.add('showUp');
