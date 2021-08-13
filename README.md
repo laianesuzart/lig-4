@@ -17,7 +17,7 @@ As seguintes ferramentas foram utilizadas na construção do projeto:
 * JavaScript
 
 ## Layout
-A aplicação foi desenvolvida com abordagem mobile first e possui algumas diferenças no layout destkop e mobile:
+A aplicação foi desenvolvida com abordagem mobile first e possui algumas diferenças no layout desktop e mobile:
 #### Desktop
 ![Desktop - Página inicial](https://imgur.com/BnqwEMn.png)
 ![Desktop - Tela do jogo](https://i.imgur.com/QV3XIxH.png)
