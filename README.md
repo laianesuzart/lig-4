@@ -3,7 +3,7 @@
 
 #### Projeto concluído ✔️
 
-[Sobre](#-sobre) • [Tecnologias](#-tecnologias) • [Imagens](#-imagens) • [Autores](#-autores) • [Licença](#-licença)
+[Sobre](#sobre) • [Tecnologias](#tecnologias) • [Imagens](#imagens) • [Autores](#autores) • [Licença](#licença)
 
 ## Sobre
 Projeto desenvolvido em grupo no primeiro trimestre da Kenzie Academy Brasil, com o objetivo de praticar hard e soft skills. O jogo lig-4 exige que o jogador complete uma sequência de quatro em qualquer direção (horizontal, vertical ou diagonal) para vencer, caso todas as células sejam preenchidas, o jogo termina com empate. Adicionamos uma feature de perder a vez de jogar, com a adição de um cronômetro com contagem regressiva de 15 segundos, caso a jogada não seja realizada dentro desse tempo, o jogador perde a vez.\
